@@ -4,7 +4,9 @@
   "description": "A lightweight promise-based Reddit API wrapper.",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "imiric/ajax-promise": "*"
+  },
   "development": {},
   "license": "MIT",
   "main": "index.js",

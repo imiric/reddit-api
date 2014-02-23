@@ -3,6 +3,10 @@
  * @module reddit-api
  */
 
+/**
+ * Module dependencies.
+ */
+var ajax = require('ajax-promise');
 
 exports = module.exports = Reddit;
 
