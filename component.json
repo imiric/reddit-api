@@ -1,0 +1,14 @@
+{
+  "name": "reddit-api",
+  "repo": "imiric/reddit-api",
+  "description": "A lightweight promise-based Reddit API wrapper.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
