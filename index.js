@@ -7,7 +7,7 @@
 exports = module.exports = Reddit;
 
 function Reddit() {
-    this.baseApiUrl = 'http://www.reddit.com';
+    this._baseApiUrl = 'http://www.reddit.com';
     return this;
 };
 
