@@ -1,3 +1,8 @@
+/**
+ * A lightweight promise-based Reddit API wrapper.
+ * @module reddit-api
+ */
+
 
 exports = module.exports = Reddit;
 
