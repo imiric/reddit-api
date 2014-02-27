@@ -52,9 +52,15 @@ Reddit.prototype.logout = function() {
 /**
  * Retrieves the comments associated with a URL.
  *
- * @param {string} url
+ * @param {string} urlId - ID36 of a URL.
+ * @param {Object} data - Additional request data.
+ * @see http://www.reddit.com/dev/api#GET_comments_{article}
  */
-Reddit.prototype.getComments = function(url) {
+Reddit.prototype.getComments = function(urlId, data) {
+    var r = this,
+        apiUrl = r._baseApiUrl + '/r/' + r.subreddit + '/comments/' + urlId + '.json';
+
+    return r._get(apiUrl, {}, data);
 };
 
 
