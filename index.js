@@ -17,6 +17,22 @@ function Reddit() {
 
 
 /**
+ * Convenience wrapper over `Ajax.get`.
+ *
+ * @see {@link module:ajax-promise.index:Ajax}
+ */
+Reddit.prototype._get = function(url, options, data) {
+    /* Convert data to query string */
+    var qs = Object.keys(data || {}).reduce(
+                function(a, k) {a.push(k + '=' + encodeURIComponent(data[k])); return a;},
+                []).join('&'),
+        url = url + (qs ? '?'+qs : '');
+
+    return ajax.get(url, options);
+};
+
+
+/**
  * Logs in a Reddit user.
  *
  * @param {string} username
