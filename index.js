@@ -65,6 +65,20 @@ Reddit.prototype.getComments = function(urlId, data) {
 
 
 /**
+ * Retrieves information about a Reddit "thing".
+ *
+ * @param {Object} data - Request data.
+ * @see http://www.reddit.com/dev/api#GET_api_info
+ */
+Reddit.prototype.getInfo = function(data) {
+    var r = this,
+        apiUrl = r._baseApiUrl + '/api/info.json';
+
+    return r._get(apiUrl, {}, data);
+};
+
+
+/**
  * Posts a comment on a Reddit "thing".
  *
  * @param {string} parentId - The
