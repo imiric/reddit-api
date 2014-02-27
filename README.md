@@ -17,13 +17,13 @@
   The only dependency here is [ajax-promise](http://github.com/imiric/ajax-promise),
   which in turn depends on [es6-promise](http://github.com/imiric/es6-promise).
 
-  | Library        |  Size   | Minified |
-  |:-------------- | -------:| --------:|
-  | `reddit-api`   |  2.1K   |     0.7K |
-  | `ajax-promise` |  2.7K   |     1.4K |
-  | `es6-promise`  |  18K    |     7.6K |
-  | `component`\*  |  6.2K   |     5.3K |
-  | **TOTAL**      | **29K** |  **15K** |
+| Library       | Size    | Minified |
+| :------------ | -------:| --------:|
+| `reddit-api`  |  2.1K   |     0.7K |
+| `ajax-promise`|  2.7K   |     1.4K |
+| `es6-promise` |   18K   |     7.6K |
+| `component`\* |  6.2K   |     5.3K |
+| **TOTAL**     | **29K** |  **15K** |
 
   \* Total overhead when building with `component build`.
 
