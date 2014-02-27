@@ -10,6 +10,11 @@ var ajax = require('ajax-promise');
 
 exports = module.exports = Reddit;
 
+
+/**
+ * Main module object.
+ * @constructor
+ */
 function Reddit() {
     this._baseApiUrl = 'http://www.reddit.com';
     return this;
@@ -37,6 +42,7 @@ Reddit.prototype._get = function(url, options, data) {
  *
  * @param {string} username
  * @param {string} password
+ * @see http://www.reddit.com/dev/api#POST_api_login
  */
 Reddit.prototype.login = function(username, password) {
 };
@@ -85,7 +91,7 @@ Reddit.prototype.getInfo = function(data) {
  *     {@link http://www.reddit.com/dev/api#fullnames fullname} of a parent
  *     "thing".
  * @param {string} text - The comment body.
- * @link http://www.reddit.com/dev/api#POST_api_comment
+ * @see http://www.reddit.com/dev/api#POST_api_comment
  */
 Reddit.prototype.comment = function(parentId, text) {
 };
