@@ -6,7 +6,8 @@
 /**
  * Module dependencies.
  */
-var ajax = require('ajax-promise');
+var ajax = require('ajax-promise'),
+    extend = require('extend');
 
 exports = module.exports = Reddit;
 
@@ -81,6 +82,22 @@ Reddit.prototype.getInfo = function(data) {
         apiUrl = r._baseApiUrl + '/api/info.json';
 
     return r._get(apiUrl, {}, data);
+};
+
+
+/**
+ * Vote on a Reddit "thing" (e.g. comment, link, etc.).
+ *
+ * @param {string} thingId - The fullname of the "thing".
+ * @param {number} dir - Vote direction. One of (-1, 0, 1).
+ * @see http://www.reddit.com/dev/api#POST_api_vote
+ */
+Reddit.prototype.vote = function(thingId, dir, data) {
+    var r = this,
+        data = extend(data || {}, {id: thingId, dir: dir}),
+        apiUrl = r._baseApiUrl + '/api/vote';
+
+    return ajax.post(apiUrl, {}, data)
 };
 
 

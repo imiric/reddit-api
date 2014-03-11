@@ -14,9 +14,6 @@
   but loading 20KiB of code that will likely go unused in the browser just
   because it simplifies my life as a developer is not very nice.
 
-  The only dependency here is [ajax-promise](http://github.com/imiric/ajax-promise),
-  which in turn depends on [es6-promise](http://github.com/imiric/es6-promise).
-
 | Library       | Size    | Minified |
 | :------------ | -------:| --------:|
 | `reddit-api`  |  2.1K   |     0.7K |
